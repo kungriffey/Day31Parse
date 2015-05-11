@@ -22,12 +22,22 @@
   [Parse setApplicationId:@"u8mYVbMtUXEWLG6zL4hvEeuXc5FVbgjVLwPFfsxL" clientKey:@"FYmNxshQGVY6KLHMMIhwbtSFXHHVhiV6F2Nf854g"];
 
   //Enable Analytics
-  [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
+  //[PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
   
-  //Create a parse object
-  PFObject *demoObject = [[PFObject objectWithClassName:@"Demo"];
-  [demoObject setObject:@"dataValue" forKey:@"dataColumn"];
-  [demoObject save];
+  /*Create a parse object //6C9VNyeow9
+  PFObject *gameScore = [PFObject objectWithClassName:@"GameScore"];
+  gameScore[@"score"] = @100;
+  gameScore[@"playerName"] = @"Kunwar Gill";
+  gameScore[@"cheatMode"] = @NO;
+  [gameScore saveInBackgroundWithBlock:^(BOOL succeeded, NSError *error) {
+    if (succeeded) {
+      // The object has been saved.
+    } else {
+      // There was a problem, check error.description
+    }
+  }];*/
+  
+  //[gameScore save];
     
   return YES;
 }
