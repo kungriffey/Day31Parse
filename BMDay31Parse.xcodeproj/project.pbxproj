@@ -27,6 +27,7 @@
 		2A4029FC1B00FA9F0033BFB5 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A4029FB1B00FA9F0033BFB5 /* SystemConfiguration.framework */; };
 		2A4029FE1B00FAAC0033BFB5 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A4029FD1B00FAAC0033BFB5 /* AudioToolbox.framework */; };
 		2A402A001B00FAB40033BFB5 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A4029FF1B00FAB40033BFB5 /* CFNetwork.framework */; };
+		2AC1E2E81B03978B00FD6542 /* Course.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AC1E2E71B03978B00FD6542 /* Course.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +67,8 @@
 		2A4029FB1B00FA9F0033BFB5 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		2A4029FD1B00FAAC0033BFB5 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
 		2A4029FF1B00FAB40033BFB5 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		2AC1E2E61B03978B00FD6542 /* Course.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Course.h; sourceTree = "<group>"; };
+		2AC1E2E71B03978B00FD6542 /* Course.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Course.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +144,8 @@
 				2A4029CE1B00F8280033BFB5 /* Images.xcassets */,
 				2A4029D01B00F8280033BFB5 /* LaunchScreen.xib */,
 				2A4029C11B00F8280033BFB5 /* Supporting Files */,
+				2AC1E2E61B03978B00FD6542 /* Course.h */,
+				2AC1E2E71B03978B00FD6542 /* Course.m */,
 			);
 			path = BMDay31Parse;
 			sourceTree = "<group>";
@@ -271,6 +276,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2AC1E2E81B03978B00FD6542 /* Course.m in Sources */,
 				2A4029CA1B00F8280033BFB5 /* ViewController.m in Sources */,
 				2A4029C71B00F8280033BFB5 /* AppDelegate.m in Sources */,
 				2A4029C41B00F8280033BFB5 /* main.m in Sources */,
@@ -476,6 +482,7 @@
 				2A4029E31B00F8280033BFB5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		2A4029E41B00F8280033BFB5 /* Build configuration list for PBXNativeTarget "BMDay31ParseTests" */ = {
 			isa = XCConfigurationList;
@@ -484,6 +491,7 @@
 				2A4029E61B00F8280033BFB5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

@@ -24,6 +24,20 @@
   //Enable Analytics
   //[PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
   
+  //Kwame Storing Data
+//  PFObject *myObject = [PFObject objectWithClassName:@"Demo"];
+//  [myObject setObject:[NSNumber numberWithInt:656] forKey:@"visitedCount"];
+//  [myObject setObject:@"Kunwar Gill" forKey:@"userName"];
+//  [myObject setObject:@"123456" forKey:@"userID"];
+//  [myObject saveInBackground];
+  
+  
+  //Kwame Retreiving Data
+  PFQuery *query = [PFQuery queryWithClassName:@"Demo"];
+  [query getObjectInBackgroundWithId:@"26LL76sFSi" block:^(PFObject *userInfo, NSError *error){
+    NSLog(@"%@", userInfo);
+
+  }];
   /*Create a parse object //6C9VNyeow9
   PFObject *gameScore = [PFObject objectWithClassName:@"GameScore"];
   gameScore[@"score"] = @100;
@@ -38,7 +52,17 @@
   }];*/
   
   //[gameScore save];
-    
+  
+  
+  
+ /* //Retrieve Data
+  PFQuery *queryObject = [PFQuery queryWithClassName:@"GameScore"];
+  [queryObject getObjectInBackgroundWithId:@"j50UTu3hIQ" block:^(PFObject *gameScore, NSError *error)
+   {
+     NSLog(@"%@", gameScore);
+   }];*/
+  
+  
   return YES;
 }
 
