@@ -26,6 +26,23 @@
   
   [Parse setApplicationId:@"u8mYVbMtUXEWLG6zL4hvEeuXc5FVbgjVLwPFfsxL" clientKey:@"FYmNxshQGVY6KLHMMIhwbtSFXHHVhiV6F2Nf854g"];
   
+  UIImage *imageObject = [UIImage imageNamed:@"Crop"];
+  
+  //convert this to data
+  NSData *imageData = UIImagePNGRepresentation(imageObject);
+  PFFile *imageFile = [PFFile fileWithName:@"Crop" data:imageData];
+  
+  courseObject = [Course objectWithoutDataWithObjectId:courseObject.objectId];
+  [courseObject setObject:@"Kunwar Gill" forKey:@"name"];
+  [courseObject setObject:imageFile forKey:@"image"];
+  [courseObject saveInBackground];
+  
+  
+  //Fetch The Data from Parse
+  
+  PFFile *fetchData = [courseObject objectForKey:@"image"];
+  NSData *returnedData = [fetchData getData];
+  UIImage *image = [UIImage imageWithData:returnedData];
   
 }
 

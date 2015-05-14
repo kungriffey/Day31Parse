@@ -22,10 +22,10 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
   // Override point for customization after application launch.
   
-  //initialize Course object
-  Course *courseObject = [[Course alloc]init];
-  
-  [Parse setApplicationId:@"u8mYVbMtUXEWLG6zL4hvEeuXc5FVbgjVLwPFfsxL" clientKey:@"FYmNxshQGVY6KLHMMIhwbtSFXHHVhiV6F2Nf854g"];
+//  //initialize Course object
+//  Course *courseObject = [[Course alloc]init];
+//  
+//  [Parse setApplicationId:@"u8mYVbMtUXEWLG6zL4hvEeuXc5FVbgjVLwPFfsxL" clientKey:@"FYmNxshQGVY6KLHMMIhwbtSFXHHVhiV6F2Nf854g"];
 
   //Enable Analytics
   //[PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
@@ -39,17 +39,17 @@
   
   
   //storing the object
-  courseObject = [Course objectWithoutDataWithObjectId:courseObject.objectId];
-  [courseObject setObject:@"Kunwar Gill" forKey:@"Name"];
-  [courseObject saveInBackground];
+//  courseObject = [Course objectWithoutDataWithObjectId:courseObject.objectId];
+//  [courseObject setObject:@"Kunwar Gill" forKey:@"Name"];
+//  [courseObject saveInBackground];
   
   
   //Kwame Retreiving Data
-  PFQuery *query = [PFQuery queryWithClassName:@"Demo"];
-  [query getObjectInBackgroundWithId:@"26LL76sFSi" block:^(PFObject *userInfo, NSError *error){
-    NSLog(@"%@", userInfo);
-
-  }];
+//  PFQuery *query = [PFQuery queryWithClassName:@"Demo"];
+//  [query getObjectInBackgroundWithId:@"26LL76sFSi" block:^(PFObject *userInfo, NSError *error){
+//    NSLog(@"%@", userInfo);
+//
+//  }];
   /*Create a parse object //6C9VNyeow9
   PFObject *gameScore = [PFObject objectWithClassName:@"GameScore"];
   gameScore[@"score"] = @100;
