@@ -8,6 +8,13 @@
 
 #import <Parse/Parse.h>
 
-@interface Course : PFObject
+
+@interface Course : PFObject <PFSubclassing>
+
++ (NSString *)parseClassName;
+
+@property (nonatomic, strong) NSString *courseName;
+@property (nonatomic, strong) NSString *courseDuration;
+
 
 @end

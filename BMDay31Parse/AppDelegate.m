@@ -8,9 +8,12 @@
 
 #import "AppDelegate.h"
 #import <Parse/Parse.h>
+#include "Course.h"
 
 @interface AppDelegate ()
-
+{
+  NSMutableDictionary *currentUser;
+}
 @end
 
 @implementation AppDelegate
@@ -18,6 +21,9 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
   // Override point for customization after application launch.
+  
+  //initialize Course object
+  Course *courseObject = [[Course alloc]init];
   
   [Parse setApplicationId:@"u8mYVbMtUXEWLG6zL4hvEeuXc5FVbgjVLwPFfsxL" clientKey:@"FYmNxshQGVY6KLHMMIhwbtSFXHHVhiV6F2Nf854g"];
 
@@ -30,6 +36,12 @@
 //  [myObject setObject:@"Kunwar Gill" forKey:@"userName"];
 //  [myObject setObject:@"123456" forKey:@"userID"];
 //  [myObject saveInBackground];
+  
+  
+  //storing the object
+  courseObject = [Course objectWithoutDataWithObjectId:courseObject.objectId];
+  [courseObject setObject:@"Kunwar Gill" forKey:@"Name"];
+  [courseObject saveInBackground];
   
   
   //Kwame Retreiving Data
