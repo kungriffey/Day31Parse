@@ -26,30 +26,47 @@
   
   [Parse setApplicationId:@"u8mYVbMtUXEWLG6zL4hvEeuXc5FVbgjVLwPFfsxL" clientKey:@"FYmNxshQGVY6KLHMMIhwbtSFXHHVhiV6F2Nf854g"];
   
-  UIImage *imageObject = [UIImage imageNamed:@"Crop"];
   
-  //convert this to data
-  NSData *imageData = UIImagePNGRepresentation(imageObject);
-  PFFile *imageFile = [PFFile fileWithName:@"Crop" data:imageData];
+  NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+  [defaults setObject:@"Kunwar" forKey:@"firstName"];
+  [defaults setObject:@"Gill" forKey:@"lastName"];
+  [defaults synchronize]; //saves the values
+  [self returnedData];
   
-  //What is happening here
-  courseObject = [Course objectWithoutDataWithObjectId:courseObject.objectId];
-  [courseObject setObject:@"Kunwar Gill" forKey:@"name"];
-  [courseObject setObject:imageFile forKey:@"image"];
-  [courseObject saveInBackground];
+  
+//  UIImage *imageObject = [UIImage imageNamed:@"Crop"];
+//  
+//  //convert this to data
+//  NSData *imageData = UIImagePNGRepresentation(imageObject);
+//  PFFile *imageFile = [PFFile fileWithName:@"Crop" data:imageData];
+//  
+//  //What is happening here
+//  courseObject = [Course objectWithoutDataWithObjectId:courseObject.objectId];
+//  [courseObject setObject:@"Kunwar Gill" forKey:@"name"];
+//  [courseObject setObject:imageFile forKey:@"image"];
+//  [courseObject saveInBackground];
   
   
   //Fetch The Data from Parse
   
-  PFFile *fetchData = [courseObject objectForKey:@"image"];
-  NSData *returnedData = [fetchData getData];
-  UIImage *image = [UIImage imageWithData:returnedData];
+//  PFFile *fetchData = [courseObject objectForKey:@"image"];
+//  NSData *returnedData = [fetchData getData];
+//  UIImage *image = [UIImage imageWithData:returnedData];
+//  
+//  NSLog(@"%@", returnedData);
+//  NSLog(@"%@",image);
+//  
+//  self.myImage.image = image;
   
-  NSLog(@"%@", returnedData);
-  NSLog(@"%@",image);
+}
+
+- (void)returnedData {
+  NSUserDefaults *defaults = [NSUserDefaults standardUserDefaults];
+  //pull out the first name from the firstName key
+  NSString *firstName = [defaults objectForKey:@"firstName"];
+  NSString *lastName = [defaults objectForKey:@"lastName"];
   
-  self.myImage.image = image;
-  
+  NSLog(@"%@ %@", firstName, lastName);
 }
 
 - (void)didReceiveMemoryWarning {
