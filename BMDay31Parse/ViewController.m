@@ -8,6 +8,8 @@
 
 #import "ViewController.h"
 #import <Parse/Parse.h>
+#import <FBSDKCoreKit/FBSDKCoreKit.h>
+#import <FBSDKLoginKit/FBSDKLoginKit.h>
 #import "Course.h"
 
 @interface ViewController ()
@@ -32,6 +34,10 @@
   [defaults setObject:@"Gill" forKey:@"lastName"];
   [defaults synchronize]; //saves the values
   [self returnedData];
+  
+  FBSDKLoginButton *loginButton = [[FBSDKLoginButton alloc] init];
+  loginButton.center = self.view.center;
+  [self.view addSubview:loginButton];
   
   
 //  UIImage *imageObject = [UIImage imageNamed:@"Crop"];
