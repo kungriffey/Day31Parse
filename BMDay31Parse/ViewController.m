@@ -32,6 +32,7 @@
   NSData *imageData = UIImagePNGRepresentation(imageObject);
   PFFile *imageFile = [PFFile fileWithName:@"Crop" data:imageData];
   
+  //What is happening here
   courseObject = [Course objectWithoutDataWithObjectId:courseObject.objectId];
   [courseObject setObject:@"Kunwar Gill" forKey:@"name"];
   [courseObject setObject:imageFile forKey:@"image"];
@@ -43,6 +44,11 @@
   PFFile *fetchData = [courseObject objectForKey:@"image"];
   NSData *returnedData = [fetchData getData];
   UIImage *image = [UIImage imageWithData:returnedData];
+  
+  NSLog(@"%@", returnedData);
+  NSLog(@"%@",image);
+  
+  self.myImage.image = image;
   
 }
 

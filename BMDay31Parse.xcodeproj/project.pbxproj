@@ -28,7 +28,6 @@
 		2A4029FE1B00FAAC0033BFB5 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A4029FD1B00FAAC0033BFB5 /* AudioToolbox.framework */; };
 		2A402A001B00FAB40033BFB5 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2A4029FF1B00FAB40033BFB5 /* CFNetwork.framework */; };
 		2AC1E2E81B03978B00FD6542 /* Course.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AC1E2E71B03978B00FD6542 /* Course.m */; };
-		2AC1E2EB1B03A21F00FD6542 /* ReturnObject.m in Sources */ = {isa = PBXBuildFile; fileRef = 2AC1E2EA1B03A21F00FD6542 /* ReturnObject.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,8 +69,6 @@
 		2A4029FF1B00FAB40033BFB5 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
 		2AC1E2E61B03978B00FD6542 /* Course.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Course.h; sourceTree = "<group>"; };
 		2AC1E2E71B03978B00FD6542 /* Course.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Course.m; sourceTree = "<group>"; };
-		2AC1E2E91B03A21F00FD6542 /* ReturnObject.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ReturnObject.h; sourceTree = "<group>"; };
-		2AC1E2EA1B03A21F00FD6542 /* ReturnObject.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ReturnObject.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,8 +138,6 @@
 			children = (
 				2A4029C51B00F8280033BFB5 /* AppDelegate.h */,
 				2A4029C61B00F8280033BFB5 /* AppDelegate.m */,
-				2AC1E2E91B03A21F00FD6542 /* ReturnObject.h */,
-				2AC1E2EA1B03A21F00FD6542 /* ReturnObject.m */,
 				2A4029C81B00F8280033BFB5 /* ViewController.h */,
 				2A4029C91B00F8280033BFB5 /* ViewController.m */,
 				2A4029CB1B00F8280033BFB5 /* Main.storyboard */,
@@ -284,7 +279,6 @@
 				2AC1E2E81B03978B00FD6542 /* Course.m in Sources */,
 				2A4029CA1B00F8280033BFB5 /* ViewController.m in Sources */,
 				2A4029C71B00F8280033BFB5 /* AppDelegate.m in Sources */,
-				2AC1E2EB1B03A21F00FD6542 /* ReturnObject.m in Sources */,
 				2A4029C41B00F8280033BFB5 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
