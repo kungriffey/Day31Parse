@@ -40,30 +40,32 @@
   [self.view addSubview:loginButton];
   
   
-//  UIImage *imageObject = [UIImage imageNamed:@"Crop"];
-//  
-//  //convert this to data
-//  NSData *imageData = UIImagePNGRepresentation(imageObject);
-//  PFFile *imageFile = [PFFile fileWithName:@"Crop" data:imageData];
-//  
-//  //What is happening here
-//  courseObject = [Course objectWithoutDataWithObjectId:courseObject.objectId];
-//  [courseObject setObject:@"Kunwar Gill" forKey:@"name"];
-//  [courseObject setObject:imageFile forKey:@"image"];
-//  [courseObject saveInBackground];
+  UIImage *imageObject = [UIImage imageNamed:@"Crop"];
+  
+  //convert this to data
+  NSData *imageData = UIImagePNGRepresentation(imageObject);
+  PFFile *imageFile = [PFFile fileWithName:@"Crop" data:imageData];
+  
+  //What is happening here
+  courseObject = [Course objectWithoutDataWithObjectId:courseObject.objectId];
+  [courseObject setObject:@"Kunwar Gill" forKey:@"name"];
+  [courseObject setObject:imageFile forKey:@"image"];
+  [courseObject saveInBackground];
   
   
   //Fetch The Data from Parse
   
-//  PFFile *fetchData = [courseObject objectForKey:@"image"];
-//  NSData *returnedData = [fetchData getData];
-//  UIImage *image = [UIImage imageWithData:returnedData];
-//  
-//  NSLog(@"%@", returnedData);
-//  NSLog(@"%@",image);
-//  
-//  self.myImage.image = image;
-  
+  PFFile *fetchData = [courseObject objectForKey:@"image"];
+  dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_HIGH, 0), ^{
+    NSData *returnedData = [fetchData getData];
+    UIImage *image = [UIImage imageWithData:returnedData];
+    
+    NSLog(@"%@", returnedData);
+    NSLog(@"%@",image);
+    dispatch_sync(dispatch_get_main_queue(), ^{
+       self.myImage.image = image;
+    });
+  });
 }
 
 - (void)returnedData {
